@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+  <Menu title="新闻管理" link="">
+    <SubMenu link="">新增新闻</SubMenu>
+  </Menu>
+  <Menu title="留言管理" link="">
+  </Menu>
+</Data>

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rock.WebApp", "Rock.WebApp.csproj", "{CB5A6BBF-8715-409D-A039-F8D4DF9E35EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rock.Common", "..\Rock.Common\Rock.Common.csproj", "{279EFC4B-0B5F-42D5-9AF2-359F06A451DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rock.DataContract", "..\Rock.DataContract\Rock.DataContract.csproj", "{5AB9E5E4-630C-43FB-B201-8CE9A4DA3DD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rock.Service", "..\Rock.Service\Rock.Service.csproj", "{48FD16B7-EA94-4083-8F08-9974B40B6375}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rock.Libs", "Rock.Libs", "{4964C0C7-CA73-4CA3-9E07-351037F2BAE8}"
+	ProjectSection(SolutionItems) = preProject
+		..\Rock.Libs\NPOI\Ionic.Zip.dll = ..\Rock.Libs\NPOI\Ionic.Zip.dll
+		..\Rock.Libs\Json.Net\Net35\Newtonsoft.Json.dll = ..\Rock.Libs\Json.Net\Net35\Newtonsoft.Json.dll
+		..\Rock.Libs\NPOI\NPOI.dll = ..\Rock.Libs\NPOI\NPOI.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB5A6BBF-8715-409D-A039-F8D4DF9E35EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB5A6BBF-8715-409D-A039-F8D4DF9E35EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB5A6BBF-8715-409D-A039-F8D4DF9E35EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB5A6BBF-8715-409D-A039-F8D4DF9E35EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{279EFC4B-0B5F-42D5-9AF2-359F06A451DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{279EFC4B-0B5F-42D5-9AF2-359F06A451DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{279EFC4B-0B5F-42D5-9AF2-359F06A451DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{279EFC4B-0B5F-42D5-9AF2-359F06A451DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB9E5E4-630C-43FB-B201-8CE9A4DA3DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB9E5E4-630C-43FB-B201-8CE9A4DA3DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB9E5E4-630C-43FB-B201-8CE9A4DA3DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB9E5E4-630C-43FB-B201-8CE9A4DA3DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48FD16B7-EA94-4083-8F08-9974B40B6375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48FD16B7-EA94-4083-8F08-9974B40B6375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48FD16B7-EA94-4083-8F08-9974B40B6375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48FD16B7-EA94-4083-8F08-9974B40B6375}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

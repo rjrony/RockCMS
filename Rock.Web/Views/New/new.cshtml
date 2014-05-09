@@ -1,0 +1,64 @@
+﻿@{    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "index";
+}
+@*<div id="Grid_Panel" style="width:100%;">
+    <div class="l-panel-content">
+       <div id="underscoreTable">
+</div>
+    </div>
+</div>*@
+<div id="underscoreTable">
+</div>
+@section BottomScript
+{
+    <script type="text/javascript">
+
+        function testrender() {
+            var a = "<input type='button' value='编辑'/>&nbsp;&nbsp;<input type='button' value='删除'/>";
+            return a;
+        }
+
+        var grid = null;
+        $(function () {
+
+            //            $("#Grid_Panel").ligerPanel({
+            //                title: '新闻列表',
+            //                width: 1000,
+            //                height: '100%'
+            //            });
+
+            grid = $("#underscoreTable").ligerGrid({
+                columns:
+                [
+                    { display: '新闻标题', name: 'Title' },
+                    { display: '创建日期', name: 'CreateDate' },
+                    { display: '编辑', render: testrender }
+                ],
+                pageSize: 25,
+                enabledSort: false,
+                rownumbers: true,
+                url: "/new/GetNewsList",
+                height: '95%',
+                width: '100%',
+                toolbar: {
+                    items:
+                    [
+                        { text: '增加', img: '/Resources/js/ligerUI/lib/ligerUI/skins/icons/add.gif' }
+                    ]
+                }
+            });
+
+            //            var form = $("#NewForm").RockDataForm({
+            //                fields: [
+            //                { display: "产品名称1", name: "ProductID", type: "date", size: "small", placeholder: "我是占位的" },
+            //                  { display: "产品名称221", name: "ProductID11", type: "textarea", size: "huge" },
+            //                { display: "产品名称2", name: "ProductID22", type: "select", size: "small", options: [{ text: "你好啊", value: "321" }, { text: "123", value: "321"}] },
+            //                ]
+            //            });
+
+
+        });
+
+    </script>
+}

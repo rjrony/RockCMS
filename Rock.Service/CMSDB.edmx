@@ -1,0 +1,1353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Rock.Service.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RockServiceStoreContainer">
+          <EntitySet Name="tbAbout" EntityType="Rock.Service.Store.tbAbout" store:Type="Tables" store:Schema="dbo" store:Name="tbAbout">
+            <DefiningQuery>SELECT 
+      [tbAbout].[Tid] AS [Tid], 
+      [tbAbout].[strAboutCode] AS [strAboutCode], 
+      [tbAbout].[strAboutType] AS [strAboutType], 
+      [tbAbout].[strAboutPic] AS [strAboutPic], 
+      [tbAbout].[strAboutTime] AS [strAboutTime], 
+      [tbAbout].[strAboutStopTime] AS [strAboutStopTime], 
+      [tbAbout].[strAboutJiuYe] AS [strAboutJiuYe], 
+      [tbAbout].[strAboutKaozheng] AS [strAboutKaozheng], 
+      [tbAbout].[strAboutYaodian] AS [strAboutYaodian], 
+      [tbAbout].[strAboutMoney] AS [strAboutMoney], 
+      [tbAbout].[strAboutMubiao] AS [strAboutMubiao], 
+      [tbAbout].[strAboutStatTime] AS [strAboutStatTime], 
+      [tbAbout].[strAboutContent] AS [strAboutContent], 
+      [tbAbout].[strEmpCode] AS [strEmpCode], 
+      [tbAbout].[dtCreateDate] AS [dtCreateDate], 
+      [tbAbout].[blnIsRecommend] AS [blnIsRecommend], 
+      [tbAbout].[blnIsShow] AS [blnIsShow], 
+      [tbAbout].[intOrder] AS [intOrder], 
+      [tbAbout].[strDescription] AS [strDescription], 
+      [tbAbout].[strTitle] AS [strTitle], 
+      [tbAbout].[strKeyWords] AS [strKeyWords]
+      FROM [dbo].[tbAbout] AS [tbAbout]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tbAdmin" EntityType="Rock.Service.Store.tbAdmin" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbBanner" EntityType="Rock.Service.Store.tbBanner" store:Type="Tables" store:Schema="dbo" store:Name="tbBanner">
+            <DefiningQuery>SELECT 
+      [tbBanner].[BID] AS [BID], 
+      [tbBanner].[strBannerCode] AS [strBannerCode], 
+      [tbBanner].[strBannerName] AS [strBannerName], 
+      [tbBanner].[strBannerLogo] AS [strBannerLogo], 
+      [tbBanner].[strBannerUrl] AS [strBannerUrl], 
+      [tbBanner].[intType] AS [intType], 
+      [tbBanner].[dtCreatedate] AS [dtCreatedate], 
+      [tbBanner].[intOrder] AS [intOrder], 
+      [tbBanner].[strEmpCode] AS [strEmpCode], 
+      [tbBanner].[blnIsShow] AS [blnIsShow]
+      FROM [dbo].[tbBanner] AS [tbBanner]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tbClass" EntityType="Rock.Service.Store.tbClass" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbContact" EntityType="Rock.Service.Store.tbContact" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbInfoNews" EntityType="Rock.Service.Store.tbInfoNews" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbInfoNews2" EntityType="Rock.Service.Store.tbInfoNews2" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbInfoNews3" EntityType="Rock.Service.Store.tbInfoNews3" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbInfoType" EntityType="Rock.Service.Store.tbInfoType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbInfoType2" EntityType="Rock.Service.Store.tbInfoType2" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbInfoType3" EntityType="Rock.Service.Store.tbInfoType3" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbMessage" EntityType="Rock.Service.Store.tbMessage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbProduct" EntityType="Rock.Service.Store.tbProduct" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbProduct2" EntityType="Rock.Service.Store.tbProduct2" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbProduct3" EntityType="Rock.Service.Store.tbProduct3" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbProType" EntityType="Rock.Service.Store.tbProType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbProType2" EntityType="Rock.Service.Store.tbProType2" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbProType3" EntityType="Rock.Service.Store.tbProType3" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbSiteBaseData" EntityType="Rock.Service.Store.tbSiteBaseData" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbVideos" EntityType="Rock.Service.Store.tbVideos" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'hds0620228_db.dbo.tbAbout' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tbAbout">
+          <Key>
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Name="Tid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strAboutCode" Type="varchar" MaxLength="50" />
+          <Property Name="strAboutType" Type="varchar" MaxLength="50" />
+          <Property Name="strAboutPic" Type="varchar" MaxLength="100" />
+          <Property Name="strAboutTime" Type="text" />
+          <Property Name="strAboutStopTime" Type="text" />
+          <Property Name="strAboutJiuYe" Type="text" />
+          <Property Name="strAboutKaozheng" Type="text" />
+          <Property Name="strAboutYaodian" Type="text" />
+          <Property Name="strAboutMoney" Type="text" />
+          <Property Name="strAboutMubiao" Type="text" />
+          <Property Name="strAboutStatTime" Type="text" />
+          <Property Name="strAboutContent" Type="text" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="strDescription" Type="varchar" MaxLength="300" />
+          <Property Name="strTitle" Type="varchar" MaxLength="100" />
+          <Property Name="strKeyWords" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="tbAdmin">
+          <Key>
+            <PropertyRef Name="strEmpCode" />
+          </Key>
+          <Property Name="EID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strEmpCode" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="strEmpName" Type="varchar" MaxLength="50" />
+          <Property Name="strEmpID" Type="varchar" MaxLength="50" />
+          <Property Name="strEmpPas" Type="varchar" MaxLength="50" />
+          <Property Name="strEmpPassword" Type="varchar" MaxLength="50" />
+          <Property Name="intEmpGrade" Type="smallint" />
+          <Property Name="blnIsLocked" Type="bit" />
+          <Property Name="intLoginCount" Type="int" />
+          <Property Name="dtLastLoginDate" Type="datetime" />
+          <Property Name="dtCreateDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'hds0620228_db.dbo.tbBanner' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tbBanner">
+          <Key>
+            <PropertyRef Name="BID" />
+            <PropertyRef Name="strBannerCode" />
+          </Key>
+          <Property Name="BID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strBannerCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strBannerName" Type="varchar" MaxLength="50" />
+          <Property Name="strBannerLogo" Type="varchar" MaxLength="100" />
+          <Property Name="strBannerUrl" Type="varchar" MaxLength="100" />
+          <Property Name="intType" Type="smallint" />
+          <Property Name="dtCreatedate" Type="datetime" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="50" />
+          <Property Name="blnIsShow" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbClass">
+          <Key>
+            <PropertyRef Name="DID" />
+          </Key>
+          <Property Name="DID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strTraining" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="strObjet" Type="varchar" MaxLength="100" />
+          <Property Name="strGain" Type="varchar" MaxLength="100" />
+          <Property Name="strTrip" Type="varchar" MaxLength="500" />
+          <Property Name="strClass11" Type="varchar" MaxLength="100" />
+          <Property Name="strClass12" Type="varchar" MaxLength="100" />
+          <Property Name="strClass13" Type="varchar" MaxLength="100" />
+          <Property Name="strClass21" Type="varchar" MaxLength="100" />
+          <Property Name="strClass22" Type="varchar" MaxLength="100" />
+          <Property Name="strClass23" Type="varchar" MaxLength="100" />
+          <Property Name="strClass31" Type="varchar" MaxLength="100" />
+          <Property Name="strClass32" Type="varchar" MaxLength="100" />
+          <Property Name="strClass33" Type="varchar" MaxLength="100" />
+          <Property Name="strClass41" Type="varchar" MaxLength="100" />
+          <Property Name="strClass42" Type="varchar" MaxLength="100" />
+          <Property Name="strClass43" Type="varchar" MaxLength="100" />
+          <Property Name="strClass51" Type="varchar" MaxLength="100" />
+          <Property Name="strClass52" Type="varchar" MaxLength="100" />
+          <Property Name="strClass53" Type="varchar" MaxLength="100" />
+          <Property Name="strClass61" Type="varchar" MaxLength="100" />
+          <Property Name="strClass62" Type="varchar" MaxLength="100" />
+          <Property Name="strClass63" Type="varchar" MaxLength="100" />
+          <Property Name="strClass71" Type="varchar" MaxLength="100" />
+          <Property Name="strClass72" Type="varchar" MaxLength="100" />
+          <Property Name="strClass73" Type="varchar" MaxLength="100" />
+          <Property Name="strAboutContent" Type="varchar" MaxLength="100" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+          <Property Name="intJobShowNum" Type="int" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="strIsShowRemark" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbContact">
+          <Key>
+            <PropertyRef Name="Cid" />
+            <PropertyRef Name="strContactCode" />
+          </Key>
+          <Property Name="Cid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strContactCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strContactType" Type="varchar" MaxLength="50" />
+          <Property Name="strContactContent2" Type="text" />
+          <Property Name="strContactContent" Type="text" />
+          <Property Name="strContactPic" Type="varchar" MaxLength="100" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="strTitle" Type="varchar" MaxLength="100" />
+          <Property Name="strKeyWords" Type="varchar" MaxLength="300" />
+          <Property Name="strDescription" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="tbInfoNews">
+          <Key>
+            <PropertyRef Name="strNewsCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strNewsCode" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="strTypeCode" Type="varchar" MaxLength="30" />
+          <Property Name="intNum" Type="int" />
+          <Property Name="strNewsFrom" Type="varchar" MaxLength="50" />
+          <Property Name="intType" Type="smallint" />
+          <Property Name="strNewsTitle" Type="varchar" MaxLength="300" />
+          <Property Name="strAppendName" Type="varchar" MaxLength="500" />
+          <Property Name="strNewsSoruce" Type="varchar" MaxLength="100" />
+          <Property Name="strNewsPic" Type="varchar" MaxLength="50" />
+          <Property Name="strNewsContent" Type="text" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tbInfoNews2">
+          <Key>
+            <PropertyRef Name="strNewsCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strNewsCode" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="strTypeCode" Type="varchar" MaxLength="30" />
+          <Property Name="intNum" Type="int" />
+          <Property Name="strNewsFrom" Type="varchar" MaxLength="50" />
+          <Property Name="intType" Type="smallint" />
+          <Property Name="strNewsTitle" Type="varchar" MaxLength="300" />
+          <Property Name="strAppendName" Type="varchar" MaxLength="500" />
+          <Property Name="strNewsSoruce" Type="varchar" MaxLength="100" />
+          <Property Name="strNewsPic" Type="varchar" MaxLength="50" />
+          <Property Name="strNewsContent" Type="text" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tbInfoNews3">
+          <Key>
+            <PropertyRef Name="strNewsCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strNewsCode" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="strTypeCode" Type="varchar" MaxLength="30" />
+          <Property Name="intNum" Type="int" />
+          <Property Name="strNewsFrom" Type="varchar" MaxLength="50" />
+          <Property Name="intType" Type="smallint" />
+          <Property Name="strNewsTitle" Type="varchar" MaxLength="300" />
+          <Property Name="strAppendName" Type="varchar" MaxLength="500" />
+          <Property Name="strNewsSoruce" Type="varchar" MaxLength="100" />
+          <Property Name="strNewsPic" Type="varchar" MaxLength="50" />
+          <Property Name="strNewsContent" Type="text" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tbInfoType">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="strTypeName" Type="varchar" MaxLength="100" />
+          <Property Name="intType" Type="smallint" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tbInfoType2">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="strTypeName" Type="varchar" MaxLength="100" />
+          <Property Name="intType" Type="smallint" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tbInfoType3">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="strTypeName" Type="varchar" MaxLength="100" />
+          <Property Name="intType" Type="smallint" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tbMessage">
+          <Key>
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Name="Tid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strMessageCode" Type="varchar" MaxLength="50" />
+          <Property Name="strMessagePhone" Type="varchar" MaxLength="30" />
+          <Property Name="strMessageTel" Type="varchar" MaxLength="20" />
+          <Property Name="strMessageSex" Type="varchar" MaxLength="50" />
+          <Property Name="strMessageCompany" Type="varchar" MaxLength="50" />
+          <Property Name="strMessageClass" Type="varchar" MaxLength="50" />
+          <Property Name="strMessageAddress" Type="varchar" MaxLength="50" />
+          <Property Name="strMessageName" Type="varchar" MaxLength="30" />
+          <Property Name="strMessageData" Type="varchar" MaxLength="150" />
+          <Property Name="strMessageTime" Type="varchar" MaxLength="100" />
+          <Property Name="strMessageContent" Type="text" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+        </EntityType>
+        <EntityType Name="tbProduct">
+          <Key>
+            <PropertyRef Name="strProCode" />
+          </Key>
+          <Property Name="PID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strProCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strTypeCode" Type="varchar" MaxLength="50" />
+          <Property Name="strProRemark" Type="varchar" MaxLength="1000" />
+          <Property Name="strProGuige" Type="varchar" MaxLength="500" />
+          <Property Name="strProName" Type="varchar" MaxLength="100" />
+          <Property Name="strProPic" Type="varchar" MaxLength="100" />
+          <Property Name="strProContent" Type="text" />
+          <Property Name="intInfoType" Type="int" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="50" />
+          <Property Name="dtCreatedate" Type="datetime" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="strHelpFile" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbProduct2">
+          <Key>
+            <PropertyRef Name="strProCode" />
+          </Key>
+          <Property Name="PID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strProCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strTypeCode" Type="varchar" MaxLength="50" />
+          <Property Name="strProRemark" Type="varchar" MaxLength="1000" />
+          <Property Name="strProGuige" Type="varchar" MaxLength="500" />
+          <Property Name="strProName" Type="varchar" MaxLength="100" />
+          <Property Name="strProFile" Type="varchar" MaxLength="150" />
+          <Property Name="strProPic" Type="varchar" MaxLength="100" />
+          <Property Name="strProContent" Type="text" />
+          <Property Name="intInfoType" Type="int" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="50" />
+          <Property Name="dtCreatedate" Type="datetime" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" Nullable="false" />
+          <Property Name="strHelpFile" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbProduct3">
+          <Key>
+            <PropertyRef Name="strProCode" />
+          </Key>
+          <Property Name="PID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strProCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strTypeCode" Type="varchar" MaxLength="50" />
+          <Property Name="strProRemark" Type="varchar" MaxLength="1000" />
+          <Property Name="strProGuige" Type="varchar" MaxLength="500" />
+          <Property Name="strProName" Type="varchar" MaxLength="100" />
+          <Property Name="strProPic" Type="varchar" MaxLength="100" />
+          <Property Name="strProContent" Type="text" />
+          <Property Name="intInfoType" Type="int" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="50" />
+          <Property Name="dtCreatedate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+          <Property Name="strHelpFile" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbProType">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strParentCode" Type="varchar" MaxLength="50" />
+          <Property Name="strTypeName" Type="varchar" MaxLength="200" />
+          <Property Name="strTypePic" Type="varchar" MaxLength="100" />
+          <Property Name="strTypeRemark" Type="text" />
+          <Property Name="intTypeRank" Type="smallint" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+        </EntityType>
+        <EntityType Name="tbProType2">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strParentCode" Type="varchar" MaxLength="50" />
+          <Property Name="strTypeName" Type="varchar" MaxLength="200" />
+          <Property Name="strTypePic" Type="varchar" MaxLength="100" />
+          <Property Name="strTypeRemark" Type="text" />
+          <Property Name="intTypeRank" Type="smallint" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+        </EntityType>
+        <EntityType Name="tbProType3">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strParentCode" Type="varchar" MaxLength="50" />
+          <Property Name="strTypeName" Type="varchar" MaxLength="200" />
+          <Property Name="strTypePic" Type="varchar" MaxLength="100" />
+          <Property Name="strTypeRemark" Type="text" />
+          <Property Name="intTypeRank" Type="smallint" />
+          <Property Name="blnIsRecommend" Type="bit" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+        </EntityType>
+        <EntityType Name="tbSiteBaseData">
+          <Key>
+            <PropertyRef Name="DID" />
+          </Key>
+          <Property Name="DID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strSiteTitle" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="strSiteKeys" Type="varchar" MaxLength="1000" />
+          <Property Name="strComName" Type="varchar" MaxLength="300" />
+          <Property Name="strSiteLogo" Type="varchar" MaxLength="50" />
+          <Property Name="strAllRightInfo" Type="varchar" MaxLength="300" />
+          <Property Name="strSiteICPNo" Type="varchar" MaxLength="100" />
+          <Property Name="strComTel" Type="varchar" MaxLength="100" />
+          <Property Name="strComServer" Type="varchar" MaxLength="100" />
+          <Property Name="strComFax" Type="varchar" MaxLength="100" />
+          <Property Name="strComAddress" Type="varchar" MaxLength="500" />
+          <Property Name="strSiteMetaDescription" Type="varchar" MaxLength="1000" />
+          <Property Name="strComEmail" Type="varchar" MaxLength="100" />
+          <Property Name="strEmailPas" Type="varchar" MaxLength="50" />
+          <Property Name="strEmailTitle" Type="varchar" MaxLength="500" />
+          <Property Name="strEmailSMTP" Type="varchar" MaxLength="50" />
+          <Property Name="intSiteVisitCount" Type="int" />
+          <Property Name="strAboutContent" Type="text" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+          <Property Name="intJobShowNum" Type="int" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="strIsShowRemark" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbVideos">
+          <Key>
+            <PropertyRef Name="strVideoCode" />
+          </Key>
+          <Property Name="VID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strVideoCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strVideoPic" Type="varchar" MaxLength="150" />
+          <Property Name="strVideoUrl" Type="varchar" MaxLength="100" />
+          <Property Name="strVideoTitle" Type="varchar" MaxLength="100" />
+          <Property Name="strVideoSource" Type="varchar" MaxLength="50" />
+          <Property Name="strVideoContent" Type="text" />
+          <Property Name="strTitle" Type="varchar" MaxLength="100" />
+          <Property Name="strKeyWords" Type="varchar" MaxLength="300" />
+          <Property Name="strDescription" Type="varchar" MaxLength="500" />
+          <Property Name="intOnClickNum" Type="int" />
+          <Property Name="strEmpCode" Type="varchar" MaxLength="30" />
+          <Property Name="dtCreateDate" Type="datetime" />
+          <Property Name="blnIsShow" Type="bit" />
+          <Property Name="intOrder" Type="int" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Rock.Service" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CMSDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbAbout" EntityType="Rock.Service.tbAbout" />
+          <EntitySet Name="tbAdmin" EntityType="Rock.Service.tbAdmin" />
+          <EntitySet Name="tbBanner" EntityType="Rock.Service.tbBanner" />
+          <EntitySet Name="tbClass" EntityType="Rock.Service.tbClass" />
+          <EntitySet Name="tbContact" EntityType="Rock.Service.tbContact" />
+          <EntitySet Name="tbInfoNews" EntityType="Rock.Service.tbInfoNews" />
+          <EntitySet Name="tbInfoNews2" EntityType="Rock.Service.tbInfoNews2" />
+          <EntitySet Name="tbInfoNews3" EntityType="Rock.Service.tbInfoNews3" />
+          <EntitySet Name="tbInfoType" EntityType="Rock.Service.tbInfoType" />
+          <EntitySet Name="tbInfoType2" EntityType="Rock.Service.tbInfoType2" />
+          <EntitySet Name="tbInfoType3" EntityType="Rock.Service.tbInfoType3" />
+          <EntitySet Name="tbMessage" EntityType="Rock.Service.tbMessage" />
+          <EntitySet Name="tbProduct" EntityType="Rock.Service.tbProduct" />
+          <EntitySet Name="tbProduct2" EntityType="Rock.Service.tbProduct2" />
+          <EntitySet Name="tbProduct3" EntityType="Rock.Service.tbProduct3" />
+          <EntitySet Name="tbProType" EntityType="Rock.Service.tbProType" />
+          <EntitySet Name="tbProType2" EntityType="Rock.Service.tbProType2" />
+          <EntitySet Name="tbProType3" EntityType="Rock.Service.tbProType3" />
+          <EntitySet Name="tbSiteBaseData" EntityType="Rock.Service.tbSiteBaseData" />
+          <EntitySet Name="tbVideos" EntityType="Rock.Service.tbVideos" />
+        </EntityContainer>
+        <EntityType Name="tbAbout">
+          <Key>
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Name="Tid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strAboutCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutPic" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutTime" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutStopTime" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutJiuYe" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutKaozheng" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutYaodian" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutMoney" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutMubiao" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutStatTime" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="strDescription" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="strTitle" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strKeyWords" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbAdmin">
+          <Key>
+            <PropertyRef Name="strEmpCode" />
+          </Key>
+          <Property Name="EID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strEmpCode" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="strEmpName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strEmpID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strEmpPas" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strEmpPassword" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="intEmpGrade" Type="Int16" />
+          <Property Name="blnIsLocked" Type="Boolean" />
+          <Property Name="intLoginCount" Type="Int32" />
+          <Property Name="dtLastLoginDate" Type="DateTime" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="tbBanner">
+          <Key>
+            <PropertyRef Name="BID" />
+            <PropertyRef Name="strBannerCode" />
+          </Key>
+          <Property Name="BID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strBannerCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strBannerName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strBannerLogo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBannerUrl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="intType" Type="Int16" />
+          <Property Name="dtCreatedate" Type="DateTime" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="strEmpCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="blnIsShow" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbClass">
+          <Key>
+            <PropertyRef Name="DID" />
+          </Key>
+          <Property Name="DID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strTraining" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strObjet" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strGain" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strTrip" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strClass11" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass12" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass13" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass21" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass22" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass23" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass31" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass32" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass33" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass41" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass42" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass43" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass51" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass52" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass53" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass61" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass62" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass63" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass71" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass72" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strClass73" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strAboutContent" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="intJobShowNum" Type="Int32" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="strIsShowRemark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbContact">
+          <Key>
+            <PropertyRef Name="Cid" />
+            <PropertyRef Name="strContactCode" />
+          </Key>
+          <Property Name="Cid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strContactCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strContactType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strContactContent2" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strContactContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strContactPic" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="strTitle" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strKeyWords" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="strDescription" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbInfoNews">
+          <Key>
+            <PropertyRef Name="strNewsCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strNewsCode" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="intNum" Type="Int32" />
+          <Property Name="strNewsFrom" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="intType" Type="Int16" />
+          <Property Name="strNewsTitle" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="strAppendName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strNewsSoruce" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strNewsPic" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strNewsContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbInfoNews2">
+          <Key>
+            <PropertyRef Name="strNewsCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strNewsCode" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="intNum" Type="Int32" />
+          <Property Name="strNewsFrom" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="intType" Type="Int16" />
+          <Property Name="strNewsTitle" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="strAppendName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strNewsSoruce" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strNewsPic" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strNewsContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbInfoNews3">
+          <Key>
+            <PropertyRef Name="strNewsCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strNewsCode" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="intNum" Type="Int32" />
+          <Property Name="strNewsFrom" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="intType" Type="Int16" />
+          <Property Name="strNewsTitle" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="strAppendName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strNewsSoruce" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strNewsPic" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strNewsContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbInfoType">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="intType" Type="Int16" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbInfoType2">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="intType" Type="Int16" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbInfoType3">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="intType" Type="Int16" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbMessage">
+          <Key>
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Name="Tid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strMessageCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strMessagePhone" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="strMessageTel" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="strMessageSex" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strMessageCompany" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strMessageClass" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strMessageAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strMessageName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="strMessageData" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="strMessageTime" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strMessageContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbProduct">
+          <Key>
+            <PropertyRef Name="strProCode" />
+          </Key>
+          <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strProCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strProRemark" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strProGuige" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strProName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strProPic" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strProContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="intInfoType" Type="Int32" />
+          <Property Name="strEmpCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreatedate" Type="DateTime" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="strHelpFile" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbProduct2">
+          <Key>
+            <PropertyRef Name="strProCode" />
+          </Key>
+          <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strProCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strProRemark" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strProGuige" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strProName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strProFile" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="strProPic" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strProContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="intInfoType" Type="Int32" />
+          <Property Name="strEmpCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreatedate" Type="DateTime" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" Nullable="false" />
+          <Property Name="strHelpFile" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbProduct3">
+          <Key>
+            <PropertyRef Name="strProCode" />
+          </Key>
+          <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strProCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strProRemark" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strProGuige" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strProName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strProPic" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strProContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="intInfoType" Type="Int32" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreatedate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+          <Property Name="strHelpFile" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbProType">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strParentCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="strTypePic" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeRemark" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="intTypeRank" Type="Int16" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbProType2">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strParentCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="strTypePic" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeRemark" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="intTypeRank" Type="Int16" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbProType3">
+          <Key>
+            <PropertyRef Name="strTypeCode" />
+          </Key>
+          <Property Name="TID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strTypeCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strParentCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="strTypePic" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strTypeRemark" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="intTypeRank" Type="Int16" />
+          <Property Name="blnIsRecommend" Type="Boolean" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbSiteBaseData">
+          <Key>
+            <PropertyRef Name="DID" />
+          </Key>
+          <Property Name="DID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strSiteTitle" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strSiteKeys" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strComName" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="strSiteLogo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strAllRightInfo" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="strSiteICPNo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strComTel" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strComServer" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strComFax" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strComAddress" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strSiteMetaDescription" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strComEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strEmailPas" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strEmailTitle" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strEmailSMTP" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="intSiteVisitCount" Type="Int32" />
+          <Property Name="strAboutContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="intJobShowNum" Type="Int32" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="strIsShowRemark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbVideos">
+          <Key>
+            <PropertyRef Name="strVideoCode" />
+          </Key>
+          <Property Name="VID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strVideoCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strVideoPic" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="strVideoUrl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strVideoTitle" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strVideoSource" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strVideoContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strTitle" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strKeyWords" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="strDescription" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="intOnClickNum" Type="Int32" />
+          <Property Name="strEmpCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="dtCreateDate" Type="DateTime" />
+          <Property Name="blnIsShow" Type="Boolean" />
+          <Property Name="intOrder" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RockServiceStoreContainer" CdmEntityContainer="CMSDB">
+          <EntitySetMapping Name="tbAbout">
+            <EntityTypeMapping TypeName="Rock.Service.tbAbout">
+              <MappingFragment StoreEntitySet="tbAbout">
+                <ScalarProperty Name="Tid" ColumnName="Tid" />
+                <ScalarProperty Name="strAboutCode" ColumnName="strAboutCode" />
+                <ScalarProperty Name="strAboutType" ColumnName="strAboutType" />
+                <ScalarProperty Name="strAboutPic" ColumnName="strAboutPic" />
+                <ScalarProperty Name="strAboutTime" ColumnName="strAboutTime" />
+                <ScalarProperty Name="strAboutStopTime" ColumnName="strAboutStopTime" />
+                <ScalarProperty Name="strAboutJiuYe" ColumnName="strAboutJiuYe" />
+                <ScalarProperty Name="strAboutKaozheng" ColumnName="strAboutKaozheng" />
+                <ScalarProperty Name="strAboutYaodian" ColumnName="strAboutYaodian" />
+                <ScalarProperty Name="strAboutMoney" ColumnName="strAboutMoney" />
+                <ScalarProperty Name="strAboutMubiao" ColumnName="strAboutMubiao" />
+                <ScalarProperty Name="strAboutStatTime" ColumnName="strAboutStatTime" />
+                <ScalarProperty Name="strAboutContent" ColumnName="strAboutContent" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="strDescription" ColumnName="strDescription" />
+                <ScalarProperty Name="strTitle" ColumnName="strTitle" />
+                <ScalarProperty Name="strKeyWords" ColumnName="strKeyWords" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbAdmin">
+            <EntityTypeMapping TypeName="Rock.Service.tbAdmin">
+              <MappingFragment StoreEntitySet="tbAdmin">
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="strEmpName" ColumnName="strEmpName" />
+                <ScalarProperty Name="strEmpID" ColumnName="strEmpID" />
+                <ScalarProperty Name="strEmpPas" ColumnName="strEmpPas" />
+                <ScalarProperty Name="strEmpPassword" ColumnName="strEmpPassword" />
+                <ScalarProperty Name="intEmpGrade" ColumnName="intEmpGrade" />
+                <ScalarProperty Name="blnIsLocked" ColumnName="blnIsLocked" />
+                <ScalarProperty Name="intLoginCount" ColumnName="intLoginCount" />
+                <ScalarProperty Name="dtLastLoginDate" ColumnName="dtLastLoginDate" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbBanner">
+            <EntityTypeMapping TypeName="Rock.Service.tbBanner">
+              <MappingFragment StoreEntitySet="tbBanner">
+                <ScalarProperty Name="BID" ColumnName="BID" />
+                <ScalarProperty Name="strBannerCode" ColumnName="strBannerCode" />
+                <ScalarProperty Name="strBannerName" ColumnName="strBannerName" />
+                <ScalarProperty Name="strBannerLogo" ColumnName="strBannerLogo" />
+                <ScalarProperty Name="strBannerUrl" ColumnName="strBannerUrl" />
+                <ScalarProperty Name="intType" ColumnName="intType" />
+                <ScalarProperty Name="dtCreatedate" ColumnName="dtCreatedate" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbClass">
+            <EntityTypeMapping TypeName="Rock.Service.tbClass">
+              <MappingFragment StoreEntitySet="tbClass">
+                <ScalarProperty Name="DID" ColumnName="DID" />
+                <ScalarProperty Name="strTraining" ColumnName="strTraining" />
+                <ScalarProperty Name="strObjet" ColumnName="strObjet" />
+                <ScalarProperty Name="strGain" ColumnName="strGain" />
+                <ScalarProperty Name="strTrip" ColumnName="strTrip" />
+                <ScalarProperty Name="strClass11" ColumnName="strClass11" />
+                <ScalarProperty Name="strClass12" ColumnName="strClass12" />
+                <ScalarProperty Name="strClass13" ColumnName="strClass13" />
+                <ScalarProperty Name="strClass21" ColumnName="strClass21" />
+                <ScalarProperty Name="strClass22" ColumnName="strClass22" />
+                <ScalarProperty Name="strClass23" ColumnName="strClass23" />
+                <ScalarProperty Name="strClass31" ColumnName="strClass31" />
+                <ScalarProperty Name="strClass32" ColumnName="strClass32" />
+                <ScalarProperty Name="strClass33" ColumnName="strClass33" />
+                <ScalarProperty Name="strClass41" ColumnName="strClass41" />
+                <ScalarProperty Name="strClass42" ColumnName="strClass42" />
+                <ScalarProperty Name="strClass43" ColumnName="strClass43" />
+                <ScalarProperty Name="strClass51" ColumnName="strClass51" />
+                <ScalarProperty Name="strClass52" ColumnName="strClass52" />
+                <ScalarProperty Name="strClass53" ColumnName="strClass53" />
+                <ScalarProperty Name="strClass61" ColumnName="strClass61" />
+                <ScalarProperty Name="strClass62" ColumnName="strClass62" />
+                <ScalarProperty Name="strClass63" ColumnName="strClass63" />
+                <ScalarProperty Name="strClass71" ColumnName="strClass71" />
+                <ScalarProperty Name="strClass72" ColumnName="strClass72" />
+                <ScalarProperty Name="strClass73" ColumnName="strClass73" />
+                <ScalarProperty Name="strAboutContent" ColumnName="strAboutContent" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="intJobShowNum" ColumnName="intJobShowNum" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="strIsShowRemark" ColumnName="strIsShowRemark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbContact">
+            <EntityTypeMapping TypeName="Rock.Service.tbContact">
+              <MappingFragment StoreEntitySet="tbContact">
+                <ScalarProperty Name="Cid" ColumnName="Cid" />
+                <ScalarProperty Name="strContactCode" ColumnName="strContactCode" />
+                <ScalarProperty Name="strContactType" ColumnName="strContactType" />
+                <ScalarProperty Name="strContactContent2" ColumnName="strContactContent2" />
+                <ScalarProperty Name="strContactContent" ColumnName="strContactContent" />
+                <ScalarProperty Name="strContactPic" ColumnName="strContactPic" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="strTitle" ColumnName="strTitle" />
+                <ScalarProperty Name="strKeyWords" ColumnName="strKeyWords" />
+                <ScalarProperty Name="strDescription" ColumnName="strDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbInfoNews">
+            <EntityTypeMapping TypeName="Rock.Service.tbInfoNews">
+              <MappingFragment StoreEntitySet="tbInfoNews">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="strNewsCode" ColumnName="strNewsCode" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="intNum" ColumnName="intNum" />
+                <ScalarProperty Name="strNewsFrom" ColumnName="strNewsFrom" />
+                <ScalarProperty Name="intType" ColumnName="intType" />
+                <ScalarProperty Name="strNewsTitle" ColumnName="strNewsTitle" />
+                <ScalarProperty Name="strAppendName" ColumnName="strAppendName" />
+                <ScalarProperty Name="strNewsSoruce" ColumnName="strNewsSoruce" />
+                <ScalarProperty Name="strNewsPic" ColumnName="strNewsPic" />
+                <ScalarProperty Name="strNewsContent" ColumnName="strNewsContent" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbInfoNews2">
+            <EntityTypeMapping TypeName="Rock.Service.tbInfoNews2">
+              <MappingFragment StoreEntitySet="tbInfoNews2">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="strNewsCode" ColumnName="strNewsCode" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="intNum" ColumnName="intNum" />
+                <ScalarProperty Name="strNewsFrom" ColumnName="strNewsFrom" />
+                <ScalarProperty Name="intType" ColumnName="intType" />
+                <ScalarProperty Name="strNewsTitle" ColumnName="strNewsTitle" />
+                <ScalarProperty Name="strAppendName" ColumnName="strAppendName" />
+                <ScalarProperty Name="strNewsSoruce" ColumnName="strNewsSoruce" />
+                <ScalarProperty Name="strNewsPic" ColumnName="strNewsPic" />
+                <ScalarProperty Name="strNewsContent" ColumnName="strNewsContent" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbInfoNews3">
+            <EntityTypeMapping TypeName="Rock.Service.tbInfoNews3">
+              <MappingFragment StoreEntitySet="tbInfoNews3">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="strNewsCode" ColumnName="strNewsCode" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="intNum" ColumnName="intNum" />
+                <ScalarProperty Name="strNewsFrom" ColumnName="strNewsFrom" />
+                <ScalarProperty Name="intType" ColumnName="intType" />
+                <ScalarProperty Name="strNewsTitle" ColumnName="strNewsTitle" />
+                <ScalarProperty Name="strAppendName" ColumnName="strAppendName" />
+                <ScalarProperty Name="strNewsSoruce" ColumnName="strNewsSoruce" />
+                <ScalarProperty Name="strNewsPic" ColumnName="strNewsPic" />
+                <ScalarProperty Name="strNewsContent" ColumnName="strNewsContent" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbInfoType">
+            <EntityTypeMapping TypeName="Rock.Service.tbInfoType">
+              <MappingFragment StoreEntitySet="tbInfoType">
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="strTypeName" ColumnName="strTypeName" />
+                <ScalarProperty Name="intType" ColumnName="intType" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbInfoType2">
+            <EntityTypeMapping TypeName="Rock.Service.tbInfoType2">
+              <MappingFragment StoreEntitySet="tbInfoType2">
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="strTypeName" ColumnName="strTypeName" />
+                <ScalarProperty Name="intType" ColumnName="intType" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbInfoType3">
+            <EntityTypeMapping TypeName="Rock.Service.tbInfoType3">
+              <MappingFragment StoreEntitySet="tbInfoType3">
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="strTypeName" ColumnName="strTypeName" />
+                <ScalarProperty Name="intType" ColumnName="intType" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbMessage">
+            <EntityTypeMapping TypeName="Rock.Service.tbMessage">
+              <MappingFragment StoreEntitySet="tbMessage">
+                <ScalarProperty Name="Tid" ColumnName="Tid" />
+                <ScalarProperty Name="strMessageCode" ColumnName="strMessageCode" />
+                <ScalarProperty Name="strMessagePhone" ColumnName="strMessagePhone" />
+                <ScalarProperty Name="strMessageTel" ColumnName="strMessageTel" />
+                <ScalarProperty Name="strMessageSex" ColumnName="strMessageSex" />
+                <ScalarProperty Name="strMessageCompany" ColumnName="strMessageCompany" />
+                <ScalarProperty Name="strMessageClass" ColumnName="strMessageClass" />
+                <ScalarProperty Name="strMessageAddress" ColumnName="strMessageAddress" />
+                <ScalarProperty Name="strMessageName" ColumnName="strMessageName" />
+                <ScalarProperty Name="strMessageData" ColumnName="strMessageData" />
+                <ScalarProperty Name="strMessageTime" ColumnName="strMessageTime" />
+                <ScalarProperty Name="strMessageContent" ColumnName="strMessageContent" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbProduct">
+            <EntityTypeMapping TypeName="Rock.Service.tbProduct">
+              <MappingFragment StoreEntitySet="tbProduct">
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="strProCode" ColumnName="strProCode" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="strProRemark" ColumnName="strProRemark" />
+                <ScalarProperty Name="strProGuige" ColumnName="strProGuige" />
+                <ScalarProperty Name="strProName" ColumnName="strProName" />
+                <ScalarProperty Name="strProPic" ColumnName="strProPic" />
+                <ScalarProperty Name="strProContent" ColumnName="strProContent" />
+                <ScalarProperty Name="intInfoType" ColumnName="intInfoType" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreatedate" ColumnName="dtCreatedate" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="strHelpFile" ColumnName="strHelpFile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbProduct2">
+            <EntityTypeMapping TypeName="Rock.Service.tbProduct2">
+              <MappingFragment StoreEntitySet="tbProduct2">
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="strProCode" ColumnName="strProCode" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="strProRemark" ColumnName="strProRemark" />
+                <ScalarProperty Name="strProGuige" ColumnName="strProGuige" />
+                <ScalarProperty Name="strProName" ColumnName="strProName" />
+                <ScalarProperty Name="strProFile" ColumnName="strProFile" />
+                <ScalarProperty Name="strProPic" ColumnName="strProPic" />
+                <ScalarProperty Name="strProContent" ColumnName="strProContent" />
+                <ScalarProperty Name="intInfoType" ColumnName="intInfoType" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreatedate" ColumnName="dtCreatedate" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="strHelpFile" ColumnName="strHelpFile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbProduct3">
+            <EntityTypeMapping TypeName="Rock.Service.tbProduct3">
+              <MappingFragment StoreEntitySet="tbProduct3">
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="strProCode" ColumnName="strProCode" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="strProRemark" ColumnName="strProRemark" />
+                <ScalarProperty Name="strProGuige" ColumnName="strProGuige" />
+                <ScalarProperty Name="strProName" ColumnName="strProName" />
+                <ScalarProperty Name="strProPic" ColumnName="strProPic" />
+                <ScalarProperty Name="strProContent" ColumnName="strProContent" />
+                <ScalarProperty Name="intInfoType" ColumnName="intInfoType" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreatedate" ColumnName="dtCreatedate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+                <ScalarProperty Name="strHelpFile" ColumnName="strHelpFile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbProType">
+            <EntityTypeMapping TypeName="Rock.Service.tbProType">
+              <MappingFragment StoreEntitySet="tbProType">
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="strParentCode" ColumnName="strParentCode" />
+                <ScalarProperty Name="strTypeName" ColumnName="strTypeName" />
+                <ScalarProperty Name="strTypePic" ColumnName="strTypePic" />
+                <ScalarProperty Name="strTypeRemark" ColumnName="strTypeRemark" />
+                <ScalarProperty Name="intTypeRank" ColumnName="intTypeRank" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbProType2">
+            <EntityTypeMapping TypeName="Rock.Service.tbProType2">
+              <MappingFragment StoreEntitySet="tbProType2">
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="strParentCode" ColumnName="strParentCode" />
+                <ScalarProperty Name="strTypeName" ColumnName="strTypeName" />
+                <ScalarProperty Name="strTypePic" ColumnName="strTypePic" />
+                <ScalarProperty Name="strTypeRemark" ColumnName="strTypeRemark" />
+                <ScalarProperty Name="intTypeRank" ColumnName="intTypeRank" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbProType3">
+            <EntityTypeMapping TypeName="Rock.Service.tbProType3">
+              <MappingFragment StoreEntitySet="tbProType3">
+                <ScalarProperty Name="TID" ColumnName="TID" />
+                <ScalarProperty Name="strTypeCode" ColumnName="strTypeCode" />
+                <ScalarProperty Name="strParentCode" ColumnName="strParentCode" />
+                <ScalarProperty Name="strTypeName" ColumnName="strTypeName" />
+                <ScalarProperty Name="strTypePic" ColumnName="strTypePic" />
+                <ScalarProperty Name="strTypeRemark" ColumnName="strTypeRemark" />
+                <ScalarProperty Name="intTypeRank" ColumnName="intTypeRank" />
+                <ScalarProperty Name="blnIsRecommend" ColumnName="blnIsRecommend" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbSiteBaseData">
+            <EntityTypeMapping TypeName="Rock.Service.tbSiteBaseData">
+              <MappingFragment StoreEntitySet="tbSiteBaseData">
+                <ScalarProperty Name="DID" ColumnName="DID" />
+                <ScalarProperty Name="strSiteTitle" ColumnName="strSiteTitle" />
+                <ScalarProperty Name="strSiteKeys" ColumnName="strSiteKeys" />
+                <ScalarProperty Name="strComName" ColumnName="strComName" />
+                <ScalarProperty Name="strSiteLogo" ColumnName="strSiteLogo" />
+                <ScalarProperty Name="strAllRightInfo" ColumnName="strAllRightInfo" />
+                <ScalarProperty Name="strSiteICPNo" ColumnName="strSiteICPNo" />
+                <ScalarProperty Name="strComTel" ColumnName="strComTel" />
+                <ScalarProperty Name="strComServer" ColumnName="strComServer" />
+                <ScalarProperty Name="strComFax" ColumnName="strComFax" />
+                <ScalarProperty Name="strComAddress" ColumnName="strComAddress" />
+                <ScalarProperty Name="strSiteMetaDescription" ColumnName="strSiteMetaDescription" />
+                <ScalarProperty Name="strComEmail" ColumnName="strComEmail" />
+                <ScalarProperty Name="strEmailPas" ColumnName="strEmailPas" />
+                <ScalarProperty Name="strEmailTitle" ColumnName="strEmailTitle" />
+                <ScalarProperty Name="strEmailSMTP" ColumnName="strEmailSMTP" />
+                <ScalarProperty Name="intSiteVisitCount" ColumnName="intSiteVisitCount" />
+                <ScalarProperty Name="strAboutContent" ColumnName="strAboutContent" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="intJobShowNum" ColumnName="intJobShowNum" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="strIsShowRemark" ColumnName="strIsShowRemark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbVideos">
+            <EntityTypeMapping TypeName="Rock.Service.tbVideos">
+              <MappingFragment StoreEntitySet="tbVideos">
+                <ScalarProperty Name="VID" ColumnName="VID" />
+                <ScalarProperty Name="strVideoCode" ColumnName="strVideoCode" />
+                <ScalarProperty Name="strVideoPic" ColumnName="strVideoPic" />
+                <ScalarProperty Name="strVideoUrl" ColumnName="strVideoUrl" />
+                <ScalarProperty Name="strVideoTitle" ColumnName="strVideoTitle" />
+                <ScalarProperty Name="strVideoSource" ColumnName="strVideoSource" />
+                <ScalarProperty Name="strVideoContent" ColumnName="strVideoContent" />
+                <ScalarProperty Name="strTitle" ColumnName="strTitle" />
+                <ScalarProperty Name="strKeyWords" ColumnName="strKeyWords" />
+                <ScalarProperty Name="strDescription" ColumnName="strDescription" />
+                <ScalarProperty Name="intOnClickNum" ColumnName="intOnClickNum" />
+                <ScalarProperty Name="strEmpCode" ColumnName="strEmpCode" />
+                <ScalarProperty Name="dtCreateDate" ColumnName="dtCreateDate" />
+                <ScalarProperty Name="blnIsShow" ColumnName="blnIsShow" />
+                <ScalarProperty Name="intOrder" ColumnName="intOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="CMSDB">
+        <EntityTypeShape EntityType="Rock.Service.tbAbout" Width="1.5" PointX="0.75" PointY="0.75" Height="5.02634765625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbAdmin" Width="1.5" PointX="2.75" PointY="0.75" Height="3.1161507161458326" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbBanner" Width="1.5" PointX="4.75" PointY="0.75" Height="2.9251310221354156" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbClass" Width="1.5" PointX="2.75" PointY="4.75" Height="6.9365445963541665" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbContact" Width="1.5" PointX="4.75" PointY="4.75" Height="3.4981901041666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbInfoNews" Width="1.5" PointX="6.75" PointY="0.75" Height="4.0712491861979165" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbInfoNews2" Width="1.5" PointX="6.75" PointY="5.75" Height="4.0712491861979174" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbInfoNews3" Width="1.5" PointX="8.75" PointY="0.75" Height="4.0712491861979174" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbInfoType" Width="1.5" PointX="8.75" PointY="5.75" Height="2.5430916341145817" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbInfoType2" Width="1.5" PointX="8.75" PointY="9.75" Height="2.5430916341145853" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbInfoType3" Width="1.5" PointX="10.75" PointY="0.75" Height="2.5430916341145817" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbMessage" Width="1.5" PointX="10.75" PointY="4.75" Height="4.0712491861979174" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbProduct" Width="1.5" PointX="4.75" PointY="10.75" Height="3.8802294921875031" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbProduct2" Width="1.5" PointX="10.75" PointY="9.75" Height="4.0712491861979174" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbProduct3" Width="1.5" PointX="12.75" PointY="0.75" Height="3.8802294921875031" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbProType" Width="1.5" PointX="0.75" PointY="12.75" Height="3.3071704101562531" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbProType2" Width="1.5" PointX="12.75" PointY="5.75" Height="3.3071704101562531" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbProType3" Width="1.5" PointX="12.75" PointY="10.75" Height="3.3071704101562531" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbSiteBaseData" Width="1.5" PointX="6.75" PointY="13.75" Height="5.2173673502604174" IsExpanded="true" />
+        <EntityTypeShape EntityType="Rock.Service.tbVideos" Width="1.5" PointX="14.75" PointY="0.75" Height="3.8802294921875031" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

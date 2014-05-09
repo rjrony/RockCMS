@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "index";
+    ViewBag.BodyClass = "page-header-fixed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeadCSS
+{
+    <style type="text/css">
+        .l-link
+        {
+            display: block;
+            height: 26px;
+            line-height: 26px;
+            padding-left: 20px;
+            text-decoration: underline;
+            color: #333;
+            cursor: pointer;
+        }
+        .l-link:hover
+        {
+            background: #FFEEAC;
+        }
+    </style>
+}
+<div id="Main">
+    <div position="left" title="主要菜单" id="RockCMS_Menu">
+        @foreach (var item in Model)
+        {
+            <div title="@item.Title"  style="padding: 7px 0px 7px 0px;">
+                @if (item.SubMenus != null && item.SubMenus.Count > 0)
+                {
+                    int i = 1;
+                    foreach (var sub in item.SubMenus)
+                    {
+                    <a class="l-link RockCMS_MainMenu" data-id="@i" data-href="@sub.Link" target="_blank">@sub.Title</a>
+                        i++;
+                    }
+                }
+            </div>
+        }
+    </div>
+    <div position="center" id="RockCMS_FrameCenter">
+        <div tabid="home" title="我的主页" style="height: 300px">
+            <iframe frameborder="0" name="home" id="home" src="/new/"></iframe>
+        </div>
+    </div>
+</div>
+@section BottomScript
+{
+    <script type="text/javascript">
+
+        $(function () {
+
+            $("#Main").ligerLayout({ leftWidth: 200, height: '100%' });
+
+
+            $("#RockCMS_FrameCenter").ligerTab({
+                height: '100%',
+                showSwitchInTab: true,
+                showSwitch: true,
+                onAfterAddTabItem: function (tabdata) {
+                    tabItems.push(tabdata);
+                    // saveTabStatus();
+                },
+                onAfterRemoveTabItem: function (tabid) {
+                    for (var i = 0; i < tabItems.length; i++) {
+                        var o = tabItems[i];
+                        if (o.tabid == tabid) {
+                            tabItems.splice(i, 1);
+                            saveTabStatus();
+                            break;
+                        }
+                    }
+                },
+                onReload: function (tabdata) {
+                    var tabid = tabdata.tabid;
+                    //  addFrameSkinLink(tabid);
+                }
+            });
+
+            var tab = liger.get("RockCMS_FrameCenter");
+
+            $(".RockCMS_MainMenu").click(function () {
+                var tabid = $(this).attr("data-id");
+                var text = $(this).text();
+                var url = $(this).attr("data-href");
+
+                tab.addTabItem({
+                    tabid: tabid,
+                    text: text,
+                    url: url,
+                    callback: function () {
+                    }
+                });
+
+            });
+
+
+            $("#RockCMS_Menu").ligerAccordion({ height: '100%'});
+
+
+
+
+        });
+                
+    </script>
+}

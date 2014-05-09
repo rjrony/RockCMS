@@ -9,9 +9,16 @@ namespace Rock.WebApp
 {
     public partial class Default : System.Web.UI.Page
     {
+        public enum test1
+        { 
+            ems,
+            ami,
+            ddd
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Write((int)test1.ems);
         }
     }
 }

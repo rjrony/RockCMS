@@ -983,9 +983,9 @@
             TableManaged.init();
 
             $("#btn_addNew").click(function () {
-                App.scrollTo($("#form_addNew"),-50);
+                App.scrollTo($("#form_addNew"), -50);
             });
-            
+
         });
 
     </script>

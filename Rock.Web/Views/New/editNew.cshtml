@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "editNew";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form id="EditNewForm" action="">
+</form>
+@section BottomScript
+{
+    <script type="text/javascript" src="@Url.Content("/Resources/js/RockDataForm.js")"></script>
+    <script type="text/javascript">
+        var groupicon = "../../../lib/ligerUI/skins/icons/communication.gif";
+        $(function () {
+
+            var form = $("#EditNewForm").RockDataForm({
+                inputWidth: 170, labelWidth: 90, space: 40,
+                fields: [
+                            { display: "新闻标题", name: "Title", newline: true, type: "text", width: 300, group: "基础信息", groupicon: groupicon },
+                            { display: "新闻正文 ", name: "Content", newline: true, type: "text", width: 240 },
+                            ],
+                url: "/new/editnews/41"
+            });
+            form.setData();
+
+            //            var newData;
+
+            //            //创建表单结构 
+            //            $("#EditNewForm").ligerForm({
+            //                inputWidth: 170, labelWidth: 90, space: 40,
+            //                fields: [
+            //                { display: "新闻标题", name: "Title", newline: true, type: "text", width: 300, group: "基础信息", groupicon: groupicon },
+            //                { display: "新闻正文 ", name: "Content", newline: true, type: "text", width: 240 },
+            //                ],
+            //                buttons: [
+            //                { text: '保存', width: 60 }
+            //            ]
+            //            });
+
+            //            var form = liger.get("EditNewForm");
+
+            //            $.ajax({
+            //                type: "POST",
+            //                url: "/new/EditNews/41",
+            //                dataType: 'json',
+            //                success: function (data) {
+            //                    form.setData(data);
+            //                }
+            //            });
+
+        });  
+    </script>
+}

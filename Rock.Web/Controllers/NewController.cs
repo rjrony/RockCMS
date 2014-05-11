@@ -59,7 +59,7 @@ namespace Rock.Web.Controllers
         public BaseJsonResult EditNews(int id)
         {
             BaseJsonResult result = new BaseJsonResult();
-            var news = dbContext.tbInfoNews.Select(x => new NewContract {  ID=x.ID, Content=x.strNewsContent,Title=x.strNewsTitle})
+            var news = dbContext.tbInfoNews.Select(x => new NewContract { ID = x.ID, Content = x.strNewsContent, Title = x.strNewsTitle })
                 .FirstOrDefault(x => x.ID == id);
             result.Data = news;
             return result;
@@ -68,8 +68,35 @@ namespace Rock.Web.Controllers
         public BaseJsonResult DeleteNews(int id)
         {
             BaseJsonResult result = new BaseJsonResult();
-            dbContext.tbInfoNews.DeleteObject(new tbInfoNews { ID = id });
-            //result.Data = news;
+            var resultStatus = new ResponseStatusContract();
+
+            if (id <= 0)
+            {
+                resultStatus.Status = OperationStatus.Error;
+                result.Data = resultStatus;
+                return result;
+            }
+
+            var news = dbContext.tbInfoNews.FirstOrDefault(x => x.ID == id);
+
+            if (news != null)
+            {
+                try
+                {
+                    dbContext.DeleteObject(news);
+                    if (dbContext.SaveChanges() > 0)
+                    {
+                        resultStatus.Status = OperationStatus.Success;
+                    }
+                }
+                catch
+                {
+                    resultStatus.Status = OperationStatus.Error;
+                }
+
+            }
+            result.Data = resultStatus;
+
             return result;
         }
 

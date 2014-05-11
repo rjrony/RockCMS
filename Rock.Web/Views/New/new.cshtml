@@ -12,6 +12,7 @@
 </div>
 @section BottomScript
 {
+    <script type="text/javascript" src="@Url.Content("/Resources/js/RockDataGrid.js")"></script>
     <script type="text/javascript">
 
         function testrender() {
@@ -22,43 +23,22 @@
         var grid = null;
         $(function () {
 
-            //            $("#Grid_Panel").ligerPanel({
-            //                title: '新闻列表',
-            //                width: 1000,
-            //                height: '100%'
-            //            });
-
-            grid = $("#underscoreTable").ligerGrid({
+            var params = {
                 columns:
-                [
-                    { display: '新闻标题', name: 'Title' },
-                    { display: '创建日期', name: 'CreateDate' },
-                    { display: '编辑', render: testrender }
-                ],
-                pageSize: 25,
-                enabledSort: false,
-                rownumbers: true,
+                            [
+                                { display: '新闻标题', name: 'Title' },
+                                { display: '创建日期', name: 'CreateDate' }
+                            ],
                 url: "/new/GetNewsList",
-                height: '95%',
-                width: '100%',
-                toolbar: {
-                    items:
-                    [
-                        { text: '增加', img: '/Resources/js/ligerUI/lib/ligerUI/skins/icons/add.gif' }
-                    ]
-                }
-            });
+                editUrl:'/new/edit/',
+                delUrl:'/new/deletenews/',
+                defaultEdit: true,
+                pkName:'ID',
+            };
 
-            //            var form = $("#NewForm").RockDataForm({
-            //                fields: [
-            //                { display: "产品名称1", name: "ProductID", type: "date", size: "small", placeholder: "我是占位的" },
-            //                  { display: "产品名称221", name: "ProductID11", type: "textarea", size: "huge" },
-            //                { display: "产品名称2", name: "ProductID22", type: "select", size: "small", options: [{ text: "你好啊", value: "321" }, { text: "123", value: "321"}] },
-            //                ]
-            //            });
+            grid = $("#underscoreTable").RockDataGrid(params);
 
-
-        });
+});
 
     </script>
 }

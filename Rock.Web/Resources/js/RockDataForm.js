@@ -47,6 +47,7 @@ RockDataFormObj.prototype = {
     },
     init: function () {
 
+        this.params.fields[0].groupicon = '/Resources/js/LigerUI/lib/ligerUI/skins/icons/communication.gif';
         this.params.buttons = [{ text: '保存', width: 60, click: this.submit}];
 
         //创建表单结构 

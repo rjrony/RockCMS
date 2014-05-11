@@ -16,8 +16,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rock.Libs", "Rock.Libs", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rock.Web", "..\Rock.Web\Rock.Web.csproj", "{D28D555E-177B-4DDC-9BB1-293C9C877D8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1", "..\MvcApplication1\MvcApplication1.csproj", "{5BDE2BE0-9160-4007-9EDA-1CB655C2E9C0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,10 +38,6 @@ Global
 		{D28D555E-177B-4DDC-9BB1-293C9C877D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D28D555E-177B-4DDC-9BB1-293C9C877D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D28D555E-177B-4DDC-9BB1-293C9C877D8B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5BDE2BE0-9160-4007-9EDA-1CB655C2E9C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BDE2BE0-9160-4007-9EDA-1CB655C2E9C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BDE2BE0-9160-4007-9EDA-1CB655C2E9C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BDE2BE0-9160-4007-9EDA-1CB655C2E9C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

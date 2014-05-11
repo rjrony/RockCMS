@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Rock.DataContract
 {
-    public enum Status
+    public enum OperationStatus
     {
         Success,
         Error
@@ -14,7 +14,7 @@ namespace Rock.DataContract
     public class ResponseStatusContract
     {
 
-        public Status Status { get; set; }
+        public OperationStatus Status { get; set; }
 
         public string Msg { get; set; }
 

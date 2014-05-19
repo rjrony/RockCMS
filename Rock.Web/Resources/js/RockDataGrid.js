@@ -58,7 +58,7 @@ RockDataGridObj.prototype = {
             var editUrl = this.params.editUrl;
             $("input[data-Edit='true']").live("click", function () {
                 var id = $(this).attr('data-ID');
-                $.ligerDialog.open({ height: 500, width: 800, url: editUrl + id });
+                $.ligerDialog.open({ height: 500, width: 800, url: editUrl + id, data: { ID: id} });
             });
         }
 

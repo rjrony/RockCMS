@@ -23,20 +23,21 @@
     </style>
 }
 <div id="Main">
-    <div position="left" title="主要菜单" id="RockCMS_Menu">
-        @foreach (var item in Model)
-        {
-            <div title="@item.Title"  style="padding: 7px 0px 7px 0px;">
+       <div position="left" title="功能菜单" id="RockCMS_Menu">
+        @{           
+            int i = 1;
+            foreach (var item in Model)
+            {
+            <div title="@item.Title" style="padding: 7px 0px 7px 0px;">
                 @if (item.SubMenus != null && item.SubMenus.Count > 0)
                 {
-                    int i = 1;
                     foreach (var sub in item.SubMenus)
-                    {
-                    <a class="l-link RockCMS_MainMenu" data-id="@i" data-href="@sub.Link" target="_blank">@sub.Title</a>
+                    { <a class="l-link RockCMS_MainMenu" data-id="@i" data-href="@sub.Link" target="_blank">@sub.Title</a>
                         i++;
                     }
                 }
             </div>
+            }
         }
     </div>
     <div position="center" id="RockCMS_FrameCenter">
@@ -48,7 +49,7 @@
 @section BottomScript
 {
     <script type="text/javascript">
-
+        var tabItems = [];
         $(function () {
 
             $("#Main").ligerLayout({ leftWidth: 200, height: '100%' });
@@ -60,25 +61,22 @@
                 showSwitch: true,
                 onAfterAddTabItem: function (tabdata) {
                     tabItems.push(tabdata);
-                    // saveTabStatus();
                 },
                 onAfterRemoveTabItem: function (tabid) {
                     for (var i = 0; i < tabItems.length; i++) {
                         var o = tabItems[i];
                         if (o.tabid == tabid) {
                             tabItems.splice(i, 1);
-                            saveTabStatus();
                             break;
                         }
                     }
                 },
                 onReload: function (tabdata) {
                     var tabid = tabdata.tabid;
-                    //  addFrameSkinLink(tabid);
                 }
             });
 
-            var tab = liger.get("RockCMS_FrameCenter");
+            var tab = $("#RockCMS_FrameCenter").ligerGetTabManager();
 
             $(".RockCMS_MainMenu").click(function () {
                 var tabid = $(this).attr("data-id");

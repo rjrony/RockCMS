@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include="App_Data\MenuData.xml" />
     <Content Include="Global.asax" />
-    <Content Include="Resources\js\Copy of RockDataForm.js" />
     <Content Include="Resources\js\LigerUI\lib\images\loading.gif" />
     <Content Include="Resources\js\LigerUI\lib\images\top.jpg" />
     <Content Include="Resources\js\LigerUI\lib\images\topicon.gif" />
@@ -505,9 +504,9 @@
     <Content Include="Resources\js\LigerUI\lib\syntaxhighlighter\scripts\shCore.js" />
     <Content Include="Resources\js\LigerUI\lib\syntaxhighlighter\styles\shCore.css" />
     <Content Include="Resources\js\LigerUI\lib\syntaxhighlighter\styles\shCoreDefault.css" />
+    <Content Include="Resources\js\RockCommon.js" />
     <Content Include="Resources\js\RockDataForm.js" />
     <Content Include="Resources\js\RockDataGrid.js" />
-    <Content Include="Resources\js\副本 RockDataGrid.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

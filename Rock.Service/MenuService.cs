@@ -24,7 +24,7 @@ namespace Rock.Service
                 MenuContract menu = new MenuContract
                 {
                     IsSubMenu = false,
-                    Link = item.Attribute("link").Value,
+                    Link = item.Attribute("link") == null ? string.Empty : item.Attribute("link").Value,
                     Title = item.Attribute("title").Value,
                     SubMenus = new List<MenuContract>()
                 };
